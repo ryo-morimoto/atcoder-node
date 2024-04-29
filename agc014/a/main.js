@@ -16,13 +16,9 @@ function Main(input) {
 }
 
 function cookieGame(a, b, c) {
-    // すべて同じ個数の場合は、無限に行われる
     if (a === b && b === c) {
-        if (a % 2 == 1) {
-            return 0
-        } else {
-            return -1;
-        }
+        // すべての個数が同じで、偶数の場合無限に実行されるのでキック
+        return a % 2 ? 0 : -1;
     }
 
     let count = 0;
